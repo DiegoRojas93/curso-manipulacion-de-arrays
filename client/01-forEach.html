@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <h1>forEach</h1>
+    <main id="app"> </main>
+    <script>
+        const toDoList = [
+            { task: 'Curso de JavaScript básico', isCheck: true },
+            { task: 'Matematicas con JavaScript', isCheck: true },
+            { task: 'Arrays con JavaScript', isCheck: false },
+            { task: 'Estructuras de datos con JavaScript', isCheck: false },
+            { task: 'POO con JavaScript', isCheck: false },
+            { task: 'POO intermedio con JavaScript', isCheck: false },
+            { task: 'Secretos ocultos con JavaScript', isCheck: false },
+            { task: 'Asíncronismo con JavaScript', isCheck: false },
+            { task: 'ECMAScript con JavaScript', isCheck: false },
+            { task: 'CleanCode con JavaScript', isCheck: false },
+            { task: 'Complejidad algoritmica con JavaScript', isCheck: false },
+            { task: '30 dias con JavaScript', isCheck: false },
+        ]
+        
+        const $main = document.getElementById('app'),
+              $li = document.createElement('li'),
+              $ul = document.createElement('ul');
+
+        toDoList.forEach(({task, isCheck}) => {
+            $ul.innerHTML += `<li>
+                <p>${task}</p>
+                <input type="checkbox" checked=${isCheck}/>
+            </li>`
+        });
+
+        $main.appendChild($ul)
+        
+    </script>
+    <!-- <script src="../server/01-forEach.js"></script> -->
+</body>
+</html>
