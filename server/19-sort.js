@@ -11,11 +11,13 @@ numbers.sort();
 // console.log(numbers);
 // Output: [ 1, 100000, 21, 30, 4 ]
 
+
 const numbers2 = [1, 30, 4, 21, 100000];
 numbers2.sort((a, b) => b - a);
 
 //console.log(numbers2);
 // Output: [ 100000, 30, 21, 4, 1 ]
+
 
 const words = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair', 'banana'];
 words.sort();
